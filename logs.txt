@@ -1,0 +1,27 @@
+*   8d11f75 Merge pull request #12 from Milancho12/2-find-all-completed-tasks
+|\  
+| *   b181daf Merge branch 'master' into 2-find-all-completed-tasks
+| |\  
+* | | a394e08 Resavanje problem
+|\| | 
+| |/  
+|/|   
+| * 48bcd7e FindAllCompletedTasks funcion
+* |   82e274e Merge pull request #11 from Milancho12/5-filter-tasks-by-category
+|\ \  
+| * \   1afe903 Merge branch 'master' into 5-filter-tasks-by-category
+| |\ \  
+| |/ /  
+|/| |   
+* | |   d297fa0 Merge pull request #10 from Milancho12/1-remove-a-task-by-name
+|\ \ \  
+| |_|/  
+|/| |   
+| * | d755808 Implement removeTaskByName function
+|/ /  
+| | * abaff0f FindAllCompletedTasks function
+| |/  
+| * f3507ab Implement filterByCategory function
+|/  
+* 13a9286 Add starter code
+* bf6f714 Initial commit
