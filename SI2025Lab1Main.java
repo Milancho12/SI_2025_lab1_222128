@@ -150,6 +150,13 @@ public class SI2025Lab1Main {
             System.out.println(task);
         }
 
+        // Print all completed tasks
+        List<Task> completedTasks = manager.getCompletedTasks();
+        System.out.println("\nCompleted tasks:");
+        for (Task task : completedTasks) {
+            System.out.println(task);
+        }
+
         // Print remaining tasks
         System.out.println("\nRemaining tasks after removal:");
         manager.printTasks();
