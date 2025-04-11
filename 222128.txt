@@ -17,8 +17,15 @@
 18. Go pravam toa na github
 19 Gi povtoriv cekorite za Find all completed tasks i Filter tasks by category
 #5
-20. So komandi od gitbash 
+22. So komandi od gitbash 
 	git pull origin master
 	git checkout master
 	git merge 2-find-all-completed-tasks
 	git push -u origin master
+25. So $ git log --oneline --graph --all > logs1.txt gi kopiram logovite.
+	Potoa so git add gi spremam za commit i potoa gi commit so poraka "Final commit"
+Del 3.
+28. $ git clone https://github.com/stefanandonov/SI_2025_lab1_151020.git
+
+
+
