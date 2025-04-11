@@ -62,15 +62,19 @@ class TaskManager {
 
     // MISSING FEATURES:
 
-    // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
     }
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        List<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted()) {
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
     }
 
     // 3. List tasks sorted by name
@@ -85,8 +89,13 @@ class TaskManager {
 
     // 5. Filter tasks by category
     public List<Task> filterByCategory(String category) {
-        // TODO: Implement filtering logic
-        return new ArrayList<>();
+        List<Task> filteredTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getCategory().equals(category)) {
+                filteredTasks.add(task);
+            }
+        }
+        return filteredTasks;
     }
 
     // 6. Find the highest-priority unfinished task
@@ -119,8 +128,30 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-        // MISSING: Calls to the new methods that will be implemented
+        System.out.println("Before removing 'Buy groceries':");
+        manager.printTasks();
 
+        // Remove 'Buy groceries' task
+        manager.removeTask("Buy groceries");
+
+        System.out.println("\nAfter removing 'Buy groceries':");
+
+        // Filter tasks by category "Work"
+        List<Task> workTasks = manager.filterByCategory("Work");
+        System.out.println("Tasks in Work category:");
+        for (Task task : workTasks) {
+            System.out.println(task);
+        }
+
+        // Print all completed tasks
+        List<Task> completedTasks = manager.getCompletedTasks();
+        System.out.println("\nCompleted tasks:");
+        for (Task task : completedTasks) {
+            System.out.println(task);
+        }
+
+        // Print remaining tasks
+        System.out.println("\nRemaining tasks after removal:");
         manager.printTasks();
     }
 }
