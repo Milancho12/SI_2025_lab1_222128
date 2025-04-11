@@ -62,9 +62,8 @@ class TaskManager {
 
     // MISSING FEATURES:
 
-    // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
     }
 
     // 2. Find all completed tasks
@@ -120,7 +119,12 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
         // MISSING: Calls to the new methods that will be implemented
+        System.out.println("Before removing 'Buy groceries':");
+        manager.printTasks();
 
+        manager.removeTask("Buy groceries");
+
+        System.out.println("\nAfter removing 'Buy groceries':");
         manager.printTasks();
     }
 }
